@@ -13,7 +13,6 @@ export class UsersListComponent implements OnInit {
   constructor() { }
 
   public usersList: Array<IUser> = data;
-  public loading: boolean = false;
   public selectedUser: IUser = defaultUser;
   ngOnInit() {
   }
@@ -26,8 +25,7 @@ export class UsersListComponent implements OnInit {
     }
   }
 
-
-  trackBy(elem,index){
+  trackBy(index,elem){
     return elem.id;
   }
 }
