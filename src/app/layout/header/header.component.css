@@ -1,0 +1,23 @@
+.main-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.main-menu__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.main-menu__item {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.main-menu__item i {
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+}
+
+

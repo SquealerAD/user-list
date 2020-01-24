@@ -1,0 +1,57 @@
+
+nz-layout{
+  height: 100%;
+  background: white;
+  overflow: hidden;
+}
+nz-content {
+  overflow-y: scroll;
+}
+
+app-user-details {
+  flex: 0 1 40%;
+  width: 40%;
+}
+
+app-users-list {
+  flex: 0 1 60%;
+  width: 60%;
+}
+
+
+/*!*LAYOUT STYLES*!*/
+/*.main{*/
+/*  display: flex;*/
+/*  flex-flow: row nowrap;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.side-nav{*/
+/*  flex: 1 1 auto;*/
+/*  background-color: #2D3E4F;*/
+/*  height: 100%;*/
+/*}*/
+
+/*.right-side{*/
+/*  flex: 9 1 auto;*/
+/*  height: 100%;*/
+/*  display: flex;*/
+/*  flex-flow: column nowrap;*/
+/*}*/
+
+/*.header{*/
+/*  background: #F9F9F9;*/
+/*  flex: 1 1 auto;*/
+/*  max-height: 3.1rem;*/
+/*  min-height: 2.6rem;*/
+/*}*/
+
+/*.content{*/
+/*  flex: 9 1 auto;*/
+/*  background: #FFFFFF;*/
+/*}*/
+/*!*LAYOUT STYLES END*!*/
+
+
+

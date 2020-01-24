@@ -1,0 +1,57 @@
+/*.ant-list-item-meta {*/
+/*  align-items: flex-end;*/
+/*}*/
+
+/*app-user {*/
+/*  width: 100%;*/
+/*}*/
+/*.ant-btn {*/
+/*  padding-left: 0 !important;*/
+/*  color: black;*/
+/*  width: 100%;*/
+/*  border: 1px solid transparent;*/
+/*  box-shadow: none;*/
+/*  height: 100%;*/
+/*}*/
+
+/*.ant-btn:hover {*/
+/*  border: 1px solid #D8D8D8;*/
+/*}*/
+
+/*.ant-btn span {*/
+/*  margin-left: 1rem;*/
+/*  font-size: 0.8rem;*/
+/*  font-weight: bold;*/
+/*}*/
+
+.user {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  width: fit-content;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.user:hover {
+  border: 1px solid #D8D8D8;
+}
+
+.user.selected {
+  background: #F9F9F9;
+  border: 1px solid #D8D8D8;
+}
+
+.user__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center;
+  margin-right: 1rem;
+}
+
+.user__name {
+
+}

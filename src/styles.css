@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+/*GLOBAL STYLES*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+
+
+ul,li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.ant-layout-sider-children,
+.ant-layout-sider-children ul
+{
+  background: #2D3E4F;
+}
+
+.ant-layout-header{
+  background: #F9F9F9;
+  border-bottom: 1px solid #DFE1E6;
+}
+
+.position-center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+/*ul,li{*/
+/*  list-style: none;*/
+/*}*/
+
+/*a{*/
+/*  text-decoration: none;*/
+/*}*/
+/*!*GLOBAL STYLES END*!*/

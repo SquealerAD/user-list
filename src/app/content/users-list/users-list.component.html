@@ -1,0 +1,28 @@
+<!--<div class="row">-->
+<!--  <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'" [nzLoading]="loading">-->
+<!--    <ng-template #item let-item>-->
+<!--      <nz-list-item>-->
+<!--        <app-user [item]="item"></app-user>-->
+<!--      </nz-list-item>-->
+<!--    </ng-template>-->
+<!--  </nz-list>-->
+<!--</div>-->
+
+
+<div class="user-list">
+  <div class="user-list__header">
+    <h3>Users</h3>
+    <p>If you want to get contact information to specific user, just select group and then select him from list below</p>
+  </div>
+  <ul class="user-list__collection">
+    <li *ngFor="let user of usersList; let i = index; trackBy: trackBy">
+      <app-user
+         [user]="user"
+         [selectedUser]="selectedUser"
+         (click)="onUserSelect(i)"
+      ></app-user>
+    </li>
+  </ul>
+</div>
+
+

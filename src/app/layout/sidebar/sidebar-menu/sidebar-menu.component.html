@@ -1,0 +1,11 @@
+<nav class="side-menu">
+  <ul class="side-menu__list">
+    <li
+      class="side-menu__item"
+      *ngFor="let item of sideMenuItems;"
+    >
+      <i class="{{item.icon}}"></i>
+      <a>{{item.name}}</a>
+    </li>
+  </ul>
+</nav>

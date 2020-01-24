@@ -1,0 +1,33 @@
+.logged-user {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+}
+
+.logged-user__logo-wrapper {
+  height: 64px;
+  width: 64px;
+  margin-bottom: 0.5rem;
+}
+.logged-user__logo {
+  background: url("https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.logged-user__name {
+  margin-bottom: 0.2rem;
+}
+
+.job {
+  color: #6A6E6C;
+  font-size: 0.7rem;
+}
+
+
