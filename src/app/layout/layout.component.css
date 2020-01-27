@@ -7,3 +7,18 @@ nz-layout{
 nz-content {
   overflow-y: scroll;
 }
+
+@media screen and (max-width: 1100px){
+  .ant-layout-sider {
+    flex: 0 0 0 !important;
+    min-width: 0 !important;
+    position: relative;
+    left: -300px;
+  }
+
+  .ant-layout-sider.opened {
+    left: 0;
+    position: absolute;
+    z-index: 1000;
+  }
+}

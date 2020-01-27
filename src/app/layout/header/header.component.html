@@ -1,4 +1,12 @@
 <nav class="main-menu">
+  <ul class="main-menu__list"
+      [ngStyle]="{'padding-left' : sidebarStatus ? '200px' : ''}"
+  >
+    <li class="burger-icon"><i
+      (click)="onSideBarToggle()"
+      class="fas fa-bars"
+    ></i></li>
+  </ul>
   <ul class="main-menu__list">
     <li class="main-menu__item"><i class="fas fa-globe-americas"></i> <span>English</span></li>
     <li class="main-menu__item" (click)="onExit()"><i class="fas fa-door-open"></i></li>

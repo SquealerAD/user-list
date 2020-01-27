@@ -13,6 +13,13 @@
       (click)="onAddUserClick()"
       *ngIf="!addUserOpen"
     ></i>
+    <i
+      nz-icon
+      nzType="minus"
+      nzTheme="outline"
+      (click)="onAddUserClick()"
+      *ngIf="addUserOpen"
+    ></i>
     <app-add-user *ngIf="addUserOpen" (userAdded)="userAdded()"></app-add-user>
   </div>
 

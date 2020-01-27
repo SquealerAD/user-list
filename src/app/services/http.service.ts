@@ -13,14 +13,14 @@ export class HttpService {
               @Inject(BASE_URL) private url,
               private dataStorageService: DataStorageService) {}
 
-  //            Observable<Array<User>>
+
   getUsersByPageNum(pageNum: number, perPage: number = 6): void {
     this.http.get(`${this.url}users?page=${pageNum}&per_page=${perPage}`, {
       observe: 'body',
       responseType: 'json'
     }).pipe(map((data) => {
-      this.dataStorageService.setUsers(data.data);
-      return data.data;
+      this.dataStorageService.setUsers(data['data']);
+      return data['data'];
     })).subscribe(() => {});
   }
 
@@ -31,4 +31,17 @@ export class HttpService {
     });
   }
 
+  register(credentials: Credentials): Observable<any>{
+    return this.http.post(`${this.url}register`, credentials, {
+      observe: 'body',
+      responseType: 'json'
+    });
+  }
+
+  login(credentials: Credentials): Observable<any>{
+    return this.http.post(`${this.url}login`, credentials, {
+      observe: 'body',
+      responseType: 'json'
+    });
+  }
 }

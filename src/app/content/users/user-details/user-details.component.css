@@ -9,7 +9,7 @@
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -20px;
+  background-position: center;
 }
 
 .user-details__img img  {
@@ -25,7 +25,7 @@
   height: 100%;
   width: 100%;
   background-color: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(5px);
 }
 
 .user-details__avatar-wrapper {

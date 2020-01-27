@@ -27,7 +27,7 @@ export class AuthService {
         return 'this field id required';
       }
       case 'minlength': {
-        return `min length is ${Object.values(error)[0].requiredLength} current length ${Object.values(error)[0].actualLength}`;
+        return `min length is ${Object.values(error)[0]['requiredLength']} current length ${Object.values(error)[0]['actualLength']}`;
       }
       case 'email': {
         return 'not a valid e-mail';
@@ -38,9 +38,9 @@ export class AuthService {
     }
   }
 
-  authenticate(form, typeOfAuthentication) {
+  authenticate(form, type) {
     const credentials: Credentials = new Credentials(form.value.email, form.value.password);
-    this.httpService.signupOrLogin(credentials, typeOfAuthentication)
+    this.httpService[type](credentials)
       .pipe(catchError((err) => {
         return of({error: err.error.error});
       }))

@@ -31,6 +31,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     this.authService.authenticate(this.signupForm, 'register');
+    this.signupForm.reset();
   }
 
 }

@@ -1,0 +1,17 @@
+
+nz-form-control {
+  width: 100%;
+}
+
+.ant-form-inline .ant-form-item {
+  margin: 0;
+}
+
+.row nz-form-item:nth-of-type(odd) {
+  padding-right: 0.5rem;
+}
+
+.row:last-of-type nz-form-item {
+  padding-right: 0;
+}
+

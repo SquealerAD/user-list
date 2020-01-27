@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, Renderer2, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   constructor() { }
-  isCollapsed: boolean = false;
+
   ngOnInit() {
   }
 

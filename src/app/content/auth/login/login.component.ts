@@ -33,5 +33,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.authService.authenticate(this.loginForm, 'login');
+    this.loginForm.reset();
   }
 }

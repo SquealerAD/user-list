@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AuthService} from '../../content/auth/services/auth.service';
 import {Router} from '@angular/router';
 
@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit {
   constructor(private authService: AuthService,
               private router: Router) { }
 
+  @Output() sidebarOpened: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input() sidebarStatus: boolean = false;
+
   ngOnInit() {
   }
 
@@ -19,6 +22,10 @@ export class HeaderComponent implements OnInit {
     this.authService.setAuthStatus(false);
     localStorage.removeItem('token');
     this.router.navigate(['']);
+  }
+
+  onSideBarToggle() {
+    this.sidebarOpened.emit();
   }
 
 }
