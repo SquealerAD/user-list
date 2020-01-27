@@ -1,6 +1,5 @@
 import {
   Component,
-  OnDestroy,
   OnInit
 } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -33,5 +32,4 @@ export class SignupComponent implements OnInit {
     this.authService.authenticate(this.signupForm, 'register');
     this.signupForm.reset();
   }
-
 }

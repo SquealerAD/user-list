@@ -3,6 +3,7 @@ import {DataStorageService} from '../services/data-storage.service';
 
 @NgModule({
 
+  declarations: []
 })
 export class SharedModule {
   constructor() {}

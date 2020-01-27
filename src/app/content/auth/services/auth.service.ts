@@ -50,15 +50,9 @@ export class AuthService {
         } else {
           this.messageService.showMessage('You have logged in successfully', 'success');
           localStorage.setItem('token', loginResponse.token);
-          setTimeout(() => {
-            this.setAuthStatus(true);
-            this.router.navigate(['/system/users']);
-          }, 1000);
+          this.setAuthStatus(true);
+          this.router.navigate(['/system/users']);
         }
       });
-  }
-
-  signUp() {
-
   }
 }

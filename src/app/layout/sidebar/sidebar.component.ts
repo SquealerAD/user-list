@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, Renderer2, SimpleChanges} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',

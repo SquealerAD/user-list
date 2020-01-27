@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Route, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import {AuthService} from './content/auth/services/auth.service';
 import { en_US, NzI18nService } from 'ng-zorro-antd/i18n';
 

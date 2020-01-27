@@ -1,7 +1,8 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {User} from './user/user.model';
 import {defaultUser} from '../../../shared/exports';
 import {PaginationService} from './pagination/services/pagination.service';
+import {Subscription} from "rxjs";
 
 
 @Component({
@@ -9,7 +10,7 @@ import {PaginationService} from './pagination/services/pagination.service';
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.css']
 })
-export class UsersListComponent implements OnInit {
+export class UsersListComponent implements OnInit, OnDestroy {
 
   constructor(private paginationService: PaginationService) { }
 
@@ -18,9 +19,10 @@ export class UsersListComponent implements OnInit {
   public selectedUserId: number = -1;
   public currentPage: number = 1;
   public addUserOpen: boolean = false;
+  private pgSubscription: Subscription;
 
   ngOnInit() {
-    this.paginationService.getCurrentPage()
+    this.pgSubscription = this.paginationService.getCurrentPage()
       .subscribe((currentPage) => {
           this.currentPage = currentPage;
       });
@@ -41,6 +43,12 @@ export class UsersListComponent implements OnInit {
 
   userAdded() {
     this.onAddUserClick();
+  }
+
+  ngOnDestroy(): void {
+    if (!!this.pgSubscription) {
+      this.pgSubscription.unsubscribe();
+    }
   }
 
 }

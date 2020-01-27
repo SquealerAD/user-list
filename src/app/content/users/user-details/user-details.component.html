@@ -2,9 +2,8 @@
 <div class="user-details">
   <div
     class="user-details__img"
-    [ngStyle]="{'background-image': !selectedUser.avatar ? 'url(assets/no-image.png)'  :  'url(' + selectedUser.avatar + ')'}"
+    [ngStyle]="{'background-image': !selectedUser.avatar ? 'url(assets/no-image.jpg)'  :  'url(' + selectedUser.avatar + ')'}"
   >
-<!--    <img class="img" src="{{!!selectedUser?.avatar ? selectedUser.avatar : 'assets/no-image.png'}}"/>-->
     <div class="glass" *ngIf="selectedUser?.avatar">
 
     </div>

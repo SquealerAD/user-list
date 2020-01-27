@@ -14,6 +14,8 @@ import { AddUserComponent } from './users-list/add-user/add-user.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AddUserService} from './users-list/add-user/services/add-user.service';
 import {SharedModule} from '../../shared/shared.module';
+import {BackdropSpinnerComponent} from "../../shared/backdrop-spinner/backdrop-spinner.component";
+import {DataStorageService} from "../../services/data-storage.service";
 
 @NgModule({
   declarations: [
@@ -23,15 +25,15 @@ import {SharedModule} from '../../shared/shared.module';
     UsersComponent,
     PaginationPipe,
     PaginationComponent,
-    AddUserComponent
+    AddUserComponent,
+    BackdropSpinnerComponent
   ],
   imports: [
     CommonModule,
     UsersRoutingModule,
     ReactiveFormsModule,
     RouterModule,
-    NgZorroAntdModule,
-    SharedModule
+    NgZorroAntdModule
   ],
   exports: [
 
