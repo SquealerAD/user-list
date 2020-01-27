@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {User} from "./user.model";
-import {ActivatedRoute, Params} from "@angular/router";
+import {User} from './user.model';
 
 @Component({
   selector: 'app-user',
@@ -11,8 +10,8 @@ export class UserComponent implements OnInit {
 
   constructor() { }
 
-  @Input('user') user: User;
-  @Input('selectedUserId') selectedUserId: number = -1;
+  @Input() user: User;
+  @Input() selectedUserId: number = -1;
 
   ngOnInit() {
 

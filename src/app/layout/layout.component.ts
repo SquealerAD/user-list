@@ -5,10 +5,10 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit{
+export class LayoutComponent implements OnInit {
   public isCollapsed = false;
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
 }

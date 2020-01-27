@@ -3,9 +3,9 @@ import {
   OnDestroy,
   OnInit
 } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../services/auth.service";
-import {MessageService} from "../../../services/message.service";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from '../services/auth.service';
+import {MessageService} from '../../../services/message.service';
 
 
 
@@ -25,11 +25,11 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     this.signupForm = this.fb.group({
       email: this.fb.control('', [Validators.email, Validators.required]),
-      password: this.fb.control('', [Validators.required,Validators.minLength(6)])
+      password: this.fb.control('', [Validators.required, Validators.minLength(6)])
     }, []);
   }
 
-  onSubmit(){
+  onSubmit() {
     this.authService.authenticate(this.signupForm, 'register');
   }
 

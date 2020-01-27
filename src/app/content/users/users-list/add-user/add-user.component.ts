@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
-import {AddUserService} from "./services/add-user.service";
-import {User} from "../user/user.model";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AddUserService} from './services/add-user.service';
+import {User} from '../user/user.model';
 
 @Component({
   selector: 'app-add-user',
@@ -13,7 +13,7 @@ export class AddUserComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private addUserService: AddUserService) { }
   public addUserForm: FormGroup;
-  @Output('userAdded') userAdded: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() userAdded: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   ngOnInit() {
     this.addUserForm = this.fb.group({
@@ -25,7 +25,7 @@ export class AddUserComponent implements OnInit {
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.addUserForm);
     const submitedUser: User = {id: this.addUserService.generateUniqueId(), ...this.addUserForm.value};
     this.addUserService.addUser(submitedUser);

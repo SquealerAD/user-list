@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {User} from "./user/user.model";
-import {defaultUser} from "../../../shared/exports";
-import {PaginationService} from "./pagination/services/pagination.service";
+import {User} from './user/user.model';
+import {defaultUser} from '../../../shared/exports';
+import {PaginationService} from './pagination/services/pagination.service';
 
 
 @Component({
@@ -13,8 +13,8 @@ export class UsersListComponent implements OnInit {
 
   constructor(private paginationService: PaginationService) { }
 
-  @Input('userList') usersList: Array<User>;
-  @Output('userSelected') userSelected: EventEmitter<User> = new EventEmitter<User>();
+  @Input() usersList: Array<User> = [];
+  @Output() userSelected: EventEmitter<User> = new EventEmitter<User>();
   public selectedUserId: number = -1;
   public currentPage: number = 1;
   public addUserOpen: boolean = false;
@@ -31,15 +31,15 @@ export class UsersListComponent implements OnInit {
     this.userSelected.emit(this.selectedUserId >= 0 ? this.usersList.find(u => u.id === user.id) : defaultUser);
   }
 
-  trackBy(index,elem){
+  trackBy(index, elem) {
     return elem.id;
   }
 
-  onAddUserClick(){
+  onAddUserClick() {
       this.addUserOpen = !this.addUserOpen;
   }
 
-  userAdded(){
+  userAdded() {
     this.onAddUserClick();
   }
 

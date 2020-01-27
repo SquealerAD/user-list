@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PaginationService} from "./services/pagination.service";
-import {User} from "../user/user.model";
+import {PaginationService} from './services/pagination.service';
 
 @Component({
   selector: 'app-pagination',
@@ -12,11 +11,11 @@ export class PaginationComponent implements OnInit {
   constructor(private paginationService: PaginationService) {
   }
 
-  @Input('numberOfUsers') numberOfUsers: number;
+  @Input() numberOfUsers: number;
   ngOnInit() {
 
   }
-  onPageIndexChange(index){
+  onPageIndexChange(index) {
     this.paginationService.setCurrentPage(index);
   }
 }

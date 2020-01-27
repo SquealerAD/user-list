@@ -1,9 +1,9 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {HttpService} from "../../services/http.service";
-import {User} from "./users-list/user/user.model";
-import {ActivatedRoute, Router} from "@angular/router";
-import {DataStorageService} from "../../services/data-storage.service";
-import {defaultUser} from "../../shared/exports";
+import {HttpService} from '../../services/http.service';
+import {User} from './users-list/user/user.model';
+import {ActivatedRoute, Router} from '@angular/router';
+import {DataStorageService} from '../../services/data-storage.service';
+import {defaultUser} from '../../shared/exports';
 
 @Component({
   selector: 'app-users',
@@ -26,7 +26,7 @@ export class UsersComponent implements OnInit {
       });
   }
 
-  onUserSelected(user){
+  onUserSelected(user) {
     this.selectedUser = user;
     this.dataStorageService.setSelectedUser(user);
   }

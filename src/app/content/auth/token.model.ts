@@ -15,5 +15,5 @@ export class Token {
   set id(value: string) {
     this._id = value;
   }
-  constructor(private _token: string, private _id?: string){}
+  constructor(private _token: string, private _id?: string) {}
 }

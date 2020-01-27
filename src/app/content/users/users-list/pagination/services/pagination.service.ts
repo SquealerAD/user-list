@@ -1,9 +1,7 @@
 
-import {Inject, Injectable} from "@angular/core";
-import {BehaviorSubject, Observable} from "rxjs";
-import {MAX_NUM_OF_PAGE_NUMBERS, NUM_OF_ITEM_PER_PAGE} from "../../../../../shared/exports";
-import {User} from "../../user/user.model";
-
+import {Inject, Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {MAX_NUM_OF_PAGE_NUMBERS, NUM_OF_ITEM_PER_PAGE} from '../../../../../shared/exports';
 
 @Injectable()
 export class PaginationService {

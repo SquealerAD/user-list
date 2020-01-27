@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -16,7 +16,7 @@ export class AuthComponent implements OnInit {
     this.router.navigate(['login']);
 
     this.router.events.subscribe((ev) => {
-        if(ev instanceof NavigationEnd){
+        if (ev instanceof NavigationEnd) {
           this.authRoute = ev.url.slice(1);
         }
     });

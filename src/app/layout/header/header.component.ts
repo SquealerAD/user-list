@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../../content/auth/services/auth.service";
-import {Router} from "@angular/router";
+import {AuthService} from '../../content/auth/services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  onExit(){
+  onExit() {
     this.authService.setAuthStatus(false);
     localStorage.removeItem('token');
     this.router.navigate(['']);
