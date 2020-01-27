@@ -1,0 +1,63 @@
+<form nz-form [nzLayout]="'inline'" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group>
+        <input
+          [formControlName]="'email'"
+          formControlName="userName"
+          nz-input
+          placeholder="Email"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group>
+        <input
+          [formControlName]="'first_name'"
+          nz-input
+          type="text"
+          placeholder="First Name"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group>
+        <input
+          [formControlName]="'last_name'"
+          nz-input
+          type="text"
+          placeholder="Last Name"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group>
+        <input
+          [formControlName]="'avatar'"
+          nz-input
+          type="text"
+          placeholder="Avatar Link"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <button
+        nz-button
+        nzType="primary"
+        [disabled]="!addUserForm.valid"
+      >Add</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

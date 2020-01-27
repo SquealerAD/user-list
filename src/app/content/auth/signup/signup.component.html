@@ -1,0 +1,57 @@
+<form
+  [formGroup]="signupForm"
+  (ngSubmit)="onSubmit()"
+  nz-form class="login-form"
+>
+  <nz-alert [nzType]="messageService.message.type" [nzMessage]="messageService.message.text"></nz-alert>
+
+  <nz-form-item [class.no-errors]="!signupForm.get('email').errors">
+    <nz-form-control
+      nzHasFeedback
+      nzErrorTip="{{signupForm.get('email').touched ? authService.generateErrorMessage('email', signupForm) : ''}}"
+      nzValidateStatus="{{signupForm.get('email').invalid && signupForm.get('email').touched ? 'error' :
+        signupForm.get('email').invalid && signupForm.get('email').pristine ? '' :
+        signupForm.get('email').valid ? 'success' : ''
+      }}"
+    >
+      <nz-input-group nzPrefixIcon="mail">
+        <input
+          [formControlName]="'email'"
+          type="text"
+          nz-input placeholder="Email"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item [class.no-errors]="!signupForm.get('password').errors">
+    <nz-form-control
+      nzHasFeedback
+      nzErrorTip="{{signupForm.get('password').touched ? authService.generateErrorMessage('password', signupForm) : ''}}"
+      nzValidateStatus="{{signupForm.get('password').invalid && signupForm.get('password').touched ? 'error' :
+        signupForm.get('password').invalid && signupForm.get('password').pristine ? '' :
+        signupForm.get('password').valid ? 'success' : ''
+      }}">
+      <nz-input-group nzPrefixIcon="lock">
+        <input
+          [formControlName]="'password'"
+          type="password"
+          nz-input
+          placeholder="Password"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <button
+        nz-button
+        [disabled]="signupForm.invalid"
+        class="login-form-button"
+        [nzType]="'primary'"
+      >Sign Up</button>
+      Or
+      <a [routerLink]="['/login']">login</a>
+    </nz-form-control>
+  </nz-form-item>
+</form>

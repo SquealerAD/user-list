@@ -1,22 +1,4 @@
 
-nz-layout{
-  height: 100%;
-  background: white;
-  overflow: hidden;
-}
-nz-content {
-  overflow-y: scroll;
-}
-
-app-user-details {
-  flex: 0 1 40%;
-  width: 40%;
-}
-
-app-users-list {
-  flex: 0 1 60%;
-  width: 60%;
-}
 
 
 /*!*LAYOUT STYLES*!*/

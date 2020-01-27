@@ -1,0 +1,33 @@
+
+<div class="user-details">
+  <div
+    class="user-details__img"
+    [ngStyle]="{'background-image': !selectedUser.avatar ? 'url(assets/no-image.png)'  :  'url(' + selectedUser.avatar + ')'}"
+  >
+<!--    <img class="img" src="{{!!selectedUser?.avatar ? selectedUser.avatar : 'assets/no-image.png'}}"/>-->
+    <div class="glass" *ngIf="selectedUser?.avatar">
+
+    </div>
+    <div class="user-details__avatar-wrapper position-center">
+      <div
+        *ngIf="selectedUser?.avatar"
+        class="user-details__avatar"
+        [ngStyle]="{'background-image': 'url(' + selectedUser.avatar + ')'}"
+      >
+
+      </div>
+      <p class="user-details__name">{{selectedUser.first_name + ' ' + selectedUser.last_name}}</p>
+    </div>
+
+  </div>
+  <div class="user-details__data">
+    <div class="container">
+      <p>id</p>
+      <p class="user-details__id">{{selectedUser.id >= 0 ? selectedUser.id : 'No User Selected'}}</p>
+    </div>
+    <div class="container">
+      <p>Email</p>
+      <p class="user-details__email">{{selectedUser.email ? selectedUser.email : 'No User Selected'}}</p>
+    </div>
+  </div>
+</div>

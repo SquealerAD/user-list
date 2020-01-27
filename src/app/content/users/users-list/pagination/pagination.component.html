@@ -1,0 +1,8 @@
+<div class="row" style="justify-content: center;">
+  <nz-pagination
+    (nzPageIndexChange)="onPageIndexChange($event)"
+    [nzTotal]="numberOfUsers"
+    [nzPageSize]="paginationService.getItemsPerPage()"
+    [nzHideOnSinglePage]="true"
+  ></nz-pagination>
+</div>

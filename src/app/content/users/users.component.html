@@ -1,0 +1,12 @@
+
+<nz-content class="main">
+  <div class="row">
+    <app-users-list
+      [userList]="userList"
+      (userSelected)="onUserSelected($event)"
+    ></app-users-list>
+    <app-user-details
+      [selectedUser]="selectedUser"
+    ></app-user-details>
+  </div>
+</nz-content>

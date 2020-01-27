@@ -1,0 +1,10 @@
+<div class="auth">
+  <nz-card
+    class="position-center"
+    [nzBordered]="true" nzTitle="{{authRoute === 'login' ? 'Login' : 'Signup'}}"
+  >
+    <router-outlet></router-outlet>
+  </nz-card>
+</div>
+
+<!--<a [routerLink]="['/system/users']">go to users</a>-->

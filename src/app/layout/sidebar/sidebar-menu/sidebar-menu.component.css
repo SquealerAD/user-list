@@ -8,6 +8,7 @@
   padding: 0.7rem 1.5rem;
   position: relative;
   overflow: hidden;
+  outline: none;
 }
 
 .side-menu__item:after{

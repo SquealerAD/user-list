@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sideMenuItems, ISideMenuItem } from  '../../exports';
+import { sideMenuItems, ISideMenuItem } from  '../../../shared/exports';
 
 @Component({
   selector: 'app-sidebar-menu',

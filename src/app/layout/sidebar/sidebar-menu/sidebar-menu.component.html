@@ -3,6 +3,8 @@
     <li
       class="side-menu__item"
       *ngFor="let item of sideMenuItems;"
+      [routerLink]="[item.name | lowercase]"
+      [routerLinkActive]="'side-menu__item--selected'"
     >
       <i class="{{item.icon}}"></i>
       <a>{{item.name}}</a>

@@ -1,11 +1,11 @@
 /*GLOBAL STYLES*/
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html,body{
+html,body {
   height: 100%;
   width: 100%;
   background: white;
@@ -13,12 +13,16 @@ html,body{
 
 
 
-ul,li{
+ul,li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
 }
 
 .row {
@@ -32,21 +36,24 @@ a{
 }
 
 .ant-layout-sider-children,
-.ant-layout-sider-children ul
-{
+.ant-layout-sider-children ul {
   background: #2D3E4F;
 }
 
-.ant-layout-header{
+.ant-layout-header {
   background: #F9F9F9;
   border-bottom: 1px solid #DFE1E6;
 }
 
-.position-center{
+.position-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+}
+
+.ant-alert {
+  margin-bottom: 24px;
 }
 /*ul,li{*/
 /*  list-style: none;*/
